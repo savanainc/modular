@@ -13,7 +13,9 @@ class WebUrlService extends UrlService {
     final href = window.location.href;
 
     if (urlStrategy is HashUrlStrategy) {
-      if (href.endsWith(Modular.initialRoute)) {
+      if (href.endsWith('.aspx')) {
+        return Modular.initialRoute;
+      } else if (href.endsWith(Modular.initialRoute)) {
         return Modular.initialRoute;
       } else if (href.contains('#')) {
         return href.split('#').last;
