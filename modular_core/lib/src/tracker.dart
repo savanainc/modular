@@ -193,7 +193,7 @@ class _Tracker implements Tracker {
         bindModule(module);
         printResolverFunc?.call('-- ${module.runtimeType} INITIALIZED');
       }
-      _disposeTags[key]!.add(route.uri.toString());
+      _disposeTags[key]!.add(route.uri.path);
     }
   }
 
