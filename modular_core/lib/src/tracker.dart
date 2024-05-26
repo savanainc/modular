@@ -153,7 +153,7 @@ class _Tracker implements Tracker {
 
   @override
   void reportPopRoute(ModularRoute route) {
-    final tag = route.uri.toString();
+    final tag = route.uri.path;
 
     for (final key in _disposeTags.keys) {
       final moduleTags = _disposeTags[key]!;
